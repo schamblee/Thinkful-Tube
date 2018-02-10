@@ -10,24 +10,23 @@ function getDataFromApi(searchTerm, callback) {
 }
 
 function renderResult(result) {
-  return `
-  
-    <div> 
+  return `<div> 
       <a class="js-result-name" href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank"><img src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}"></a>
-    </div>
-  `;
+    </div>`;
 }
 
 function displayYouTubeSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   $('.js-search-results').html(results);
-  $('.dataCount').text(results.length)
+  $('.dataCount').text(results.length);
+  
    
 }
 
 function watchSubmit() {
   $('.js-search-form').submit(event => {
     event.preventDefault();
+    $('.js-output').prop('hidden', false);
     const queryTarget = $(event.currentTarget).find('.js-query');
     const query = queryTarget.val();
     // clear out the input
