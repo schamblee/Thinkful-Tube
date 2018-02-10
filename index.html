@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>AJAX YouTube API example</title>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+     <header role="header">
+        <h1>Search YouTube Videos</h1>
+      </header>
+          <form action="#" class="js-search-form">
+            <label for="query">Search:</label>
+            <input id="query" type="text" class="js-query" placeholder="Search YouTube Videos">
+            <button type="submit">Search</button>
+          </form>
+          <main role="main" aria-live="assertive" hidden>
+          <h2><span class="dataCount"></span> Results Found</h2>
+          <div class="js-search-results">
+            
+          </div>
+        </main>
+      <script src="index.js"></script>
+    </body>
+</html>
