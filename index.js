@@ -22,6 +22,7 @@ function displayYouTubeSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   $('.js-search-results').html(results);
   $('.dataCount').text(results.length)
+   
 }
 
 function watchSubmit() {
